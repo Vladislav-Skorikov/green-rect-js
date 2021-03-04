@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Class Work</title>
+    <link href="ClassCSS.css" rel="stylesheet" />
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <input type="button" value="Change" />
+    <script>
+        var div = document.getElementsByTagName("div");
+        var counter = 0;
+
+        document.getElementsByTagName("input")[0].onclick = getBlock;
+        function getBlock() {
+            if (counter > 4) {
+                counter = 0;
+                div[4].style.backgroundColor = "green";
+            }
+
+            for (var i = 0; i < counter; i++) {
+                div[i].style.backgroundColor = "green";
+            }
+            div[counter].style.backgroundColor = "red";
+            counter++;
+        }
+    </script>
+</body>
+</html>
